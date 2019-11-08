@@ -11,6 +11,11 @@ public class Service {
 	}
 	
 	public Personne getPersonne(List<Personne> list, int idPersonne) {
+		for(Personne p : list) {
+			if(p.getPersonneId() == idPersonne) {
+				return p;
+			}
+		}
 		return null;
 	}
 	
