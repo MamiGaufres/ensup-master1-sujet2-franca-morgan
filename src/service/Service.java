@@ -1,7 +1,6 @@
 package service;
 
 import java.util.List;
-
 import metier.Personne;
 
 public class Service {
@@ -11,5 +10,8 @@ public class Service {
 		return 1;
 	}
 	
+	public Personne getPersonne(List<Personne> list, int idPersonne) {
+		return null;
+	}
 	
 }
