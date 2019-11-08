@@ -1,5 +1,6 @@
 package service;
 
+import java.util.ArrayList;
 import java.util.List;
 import metier.Personne;
 
@@ -19,8 +20,10 @@ public class Service {
 		return null;
 	}
 	
+	public static List<Personne> base = new ArrayList<Personne>();
+	
 	public List<Personne> findAllPersonnes() {
-		return null;
+		return (List<Personne>) base;
 	}
 	
 }
