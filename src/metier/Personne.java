@@ -12,8 +12,7 @@ public class Personne {
 	private ArrayList<Annonce> Annonce = new ArrayList<>();
 	
 	
-	public Personne(int personneId, String nom, String prenom, String login, String motDePasse, String dateNaissance,
-			ArrayList<metier.Annonce> annonce) {
+	public Personne(int personneId, String nom, String prenom, String login, String motDePasse, String dateNaissance) {
 		super();
 		this.personneId = personneId;
 		this.nom = nom;
@@ -21,7 +20,6 @@ public class Personne {
 		this.login = login;
 		this.motDePasse = motDePasse;
 		this.dateNaissance = dateNaissance;
-		Annonce = annonce;
 	}
 	
 	public int getPersonneId() {
