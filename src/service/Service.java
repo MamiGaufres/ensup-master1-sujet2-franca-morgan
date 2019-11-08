@@ -29,4 +29,14 @@ public class Service {
 		return (List<Personne>) base;
 	}
 	
+	//Supprimer une personne de la liste
+	public void supprimerPersonne(List<Personne> list, int idPersonne) {
+		for(Personne p : list) {
+			if(p.getPersonneId() == idPersonne) {
+				list.remove(p);
+				break;
+			}
+		}
+	}
+	
 }
