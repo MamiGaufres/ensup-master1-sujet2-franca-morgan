@@ -24,9 +24,9 @@ public class Service {
 	
 
 	//Obtenir toutes les personnes
-	public static List<Personne> base = new ArrayList<Personne>();
+	public static List<Personne> tous = new ArrayList<Personne>();
 	public List<Personne> findAllPersonnes() {
-		return (List<Personne>) base;
+		return (List<Personne>) tous;
 	}
 	
 	//Supprimer une personne de la liste

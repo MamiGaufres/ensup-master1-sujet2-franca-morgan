@@ -11,23 +11,23 @@ public class Main {
 		Personne personne3 = new Personne(3, "Chamane", "Cédric", "chadric", "19161512", "19/01/2001");
 		
 		Service service = new Service();
-		service.creerPersonne(Service.base, personne);
-		service.creerPersonne(Service.base, personne2);
-		service.creerPersonne(Service.base, personne3);
+		service.creerPersonne(Service.tous, personne);
+		service.creerPersonne(Service.tous, personne2);
+		service.creerPersonne(Service.tous, personne3);
 		
 		System.out.println("Personnes en base :");
-		System.out.println(Service.base);
+		System.out.println(Service.tous);
 		System.out.println(" ");
 		
 		Personne personne4 = new Personne(4, "Saku", "Nata", "NotNa", "azerty", "22/03/1994");
-		service.creerPersonne(Service.base, personne);
+		service.creerPersonne(Service.tous, personne);
 		System.out.println("Personnes en base après ajout :");
-		System.out.println(Service.base);
+		System.out.println(Service.tous);
 		System.out.println(" ");
 		
-		service.supprimerPersonne(Service.base, 2);
+		service.supprimerPersonne(Service.tous, 2);
 		System.out.println("Personnes en base après suppression de l'id 2 :");
-		System.out.println(Service.base);
+		System.out.println(Service.tous);
 		System.out.println(" ");
 	}
 

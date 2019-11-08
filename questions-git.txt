@@ -1,0 +1,135 @@
+﻿QUESTIONS:
+
+1/- C'est quoi Git ?
+Git est un logiciel de versionning sur des espaces appelés repository
+
+2/- C'est quoi un repository git ?
+Un repository est un espace où sont stockés les fichiers et leurs versions
+
+3/- Quelle commande faut t il écrire pour valider un ajout dans un repertoire git ?
+git add .
+
+4/- que fait la commande git push ?
+git push envoi les fichiers comportant des modifications à jour sur le repo distant
+
+5/- quel est l'avantage de git par rapport à svn?
+git est décentralisé
+
+6/- c'est quoi la commande git stash ?
+cette commande ignore nos changements afin de permettre un pull sans conflit 
+
+7/- c'est quoi la commande git branch ?
+git branch permet de selectionner/afficher les branches d'un repo
+
+8/- c'est quoi la commande git clone ?
+git clone permet de télécharger tout un repo quand le projet débute
+
+9/-c'est quoi la commande git config ?
+git config permet de configurer le git en local EX: email, name
+
+10/- c'est quoi la commande git init ?
+Permet de déclarer le répertoire courant comme espace de travail (repo local)
+
+11/- c'est quoi un conflit git ?
+quand deux fichiers de même nom n'ont pas les mêmes données, il ya conflit
+
+12/- comment resoudre un conflit git ?
+corriger la ou les lignes qui posent différence ou bien git stash
+
+13/- c'est quoi la commande git remote ?
+git remote défini le repo distant git remote add git remote remove
+
+14/- quelle est la différence entre git remote et git clone ?
+git remote permet de définir sur quel repo on va travailler alors que git clone permet de télécharger le repo distant en local
+
+15/- c'est quoi la commande git status ?
+affiche un bilan des modifications ou des éléments prêts à être commités
+
+16/- c'est quoi la commande git checkout ?
+git checkout permet (entre autre) de changer de branche
+
+17/- c'est quoi la commande git log ?
+git log affiche l'historique des changements d'un repo distant
+
+18/- donner la suite de commandes à écrire pour envoyer un fichier sur un repository distant
+git init
+git remote add orgin <lien git>
+# -- S'il y a un fichier dans le repo distant - #
+git pull origin master --allow-unrelated-histories
+# --------------------------------------------- #
+git add .
+git commit -m "<desc du fichier>"
+git push orgin master
+
+19/- c'est quoi github ?
+c'est un service de repository distants et communautaire
+
+20/- citer 3 avantages d'utiliser git dans un projet
+versionning de qualité, rollbacks si besoin, collaboratif
+
+21/- c'est quoi le fichier .gitignore
+permet de déclarer le ou les types de fichiers à ignorer
+
+22/- quelles sont les étapes permettant de lier un projet git local à github?
+Créer un repo sur Github
+Récupérer le lien
+faire les commandes de la reponse 18
+
+23/- quel est le role des branches sur git ?
+Disperser le travail (développement pur, correction de bogues, beta)...
+
+24/- c'est quoi un conflit git?
+déjà répondu
+
+25/- comment resoudre un conflit sur git ?
+déjà répondu
+
+LE BONCOIN:
+
+UML
+---
+ Personne 1-----------* Annonce
+ personneId             idAnnonce 
+ nom                    intitule
+ prenom                 detail
+ login                  prix
+ motDePasse
+ dateNaissance   
+
+ - créer un projet java : Ensup-Master1-tp2-Nom-Prenom
+ - configurer le git/github avec un projet java et rajouter serviceshuios en collaborateur
+ 
+ Metier:
+--------
+ Personne
+ Annonce
+ 
+ Iservice:
+----------
+  //Crud Personne
+ public int creerPersonne(List<Personne> list, Personne personne)
+ public Personne getPersonne(List<Personne> list,int idPersonne)
+ public void deletePersonne(List<Personne> list,int idPersonne)
+ public void updatePersonne(List<Personne> list,Personne p, String nom, String prenom, Date dateNaissance)
+ public List<Personne> findAllPersonnes()
+ public int getPersonneId(List<Personne> list,Personne p)
+ public void affichePersonnes();
+ public void afficheAnnoncesPersonne(Personne p)
+ //Crud Annonce
+ public int creerAnnonce(Personne personne, Annonce a)
+ public Annonce getAnnonce(Personne personne,int idAnnonce)
+ public void deleteAnnonce(Personne personne,int idAnnonce)
+ public void updateAnnonce(Personne personne,Annonce a)
+ public List<Annonce> findAllAnnonce(Personne personne)
+
+ServiceImpl
+-----------
+implementation de l'interface
+utiliser un tableau de Personne pour office de stockage des données
+public static List<Personne> base = new ArrayList<Personne>();
+
+Lanceur
+-------
+Tester chaque méthode
+
+A la fin (17h00) au plus tard pusher son code sur github  
