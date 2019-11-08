@@ -11,11 +11,15 @@ public class Service {
 	}
 	
 	public Personne getPersonne(List<Personne> list, int idPersonne) {
-		for(Personne p : list) {
-			if(p.getPersonneId() == idPersonne) {
-				return p;
+		for(Personne x : list) {
+			if(x.getPersonneId() == idPersonne) {
+				return x;
 			}
 		}
+		return null;
+	}
+	
+	public List<Personne> findAllPersonnes() {
 		return null;
 	}
 	
