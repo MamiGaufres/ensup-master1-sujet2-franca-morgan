@@ -39,4 +39,16 @@ public class Service {
 		}
 	}
 	
+	//Mettre à jour une personne
+	public void majPersonne(List<Personne> list, Personne p, String nom, String prenom, String dateNaissance) {
+		for(Personne personne : list) {
+			if(p.getPersonneId() == p.getPersonneId()) {
+				personne.setPrenom(prenom);
+				personne.setNom(nom);
+				personne.setDateNaissance(dateNaissance);
+				break;
+			}
+		}
+	}
+	
 }
